@@ -1,6 +1,7 @@
 # Python
 __pycache__
 venv
+venv36
 
 # IDE
 .idea
@@ -12,3 +13,4 @@ venv
 # coverage
 .coverage
 htmlcov
+

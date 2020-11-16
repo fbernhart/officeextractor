@@ -113,12 +113,12 @@ class TestExtractMedia(TestCase):
             media_list=media_list, zip_file=mock_zip_file, output_folder=output_folder
         )
 
-        mock_open_filename = mock_open_file.call_args_list[0].args[0].parts
-        mock_open_mode = mock_open_file.call_args_list[0].args[1]
+        mock_open_filename = mock_open_file.call_args_list[0][0][0].parts
+        mock_open_mode = mock_open_file.call_args_list[0][0][1]
 
         self.assertEqual(1, mock_create_folder.call_count)
         self.assertEqual(7, mock_open_file.call_count)
-        self.assertEqual(b"abcdefg", mock_open_file().write.call_args.args[0])
+        self.assertEqual(b"abcdefg", mock_open_file().write.call_args[0][0])
 
         self.assertEqual(("AAAA", "Test.docx", "image1.jpeg"), mock_open_filename)
         self.assertEqual("wb", mock_open_mode)
@@ -176,7 +176,7 @@ class TestExtract(TestCase):
         self.assertEqual(3, mock_get_media_list.call_count)
         self.assertEqual(3, mock_extract_media.call_count)
         self.assertEqual(3, mock_zip_file.call_count)
-        self.assertEqual(("Test.pptx", "r"), mock_zip_file.call_args.args)
+        self.assertEqual(("Test.pptx", "r"), mock_zip_file.call_args[0])
 
         # Test print() to sys.stdout
         expected = (
@@ -190,7 +190,7 @@ class TestExtract(TestCase):
         )
 
         for expected_calls, actual_calls in zip(expected, mock_print.call_args_list):
-            self.assertEqual(expected_calls, actual_calls.args[0])
+            self.assertEqual(expected_calls, actual_calls[0][0])
 
     def test_extract_log_false_single_string(
         self,
