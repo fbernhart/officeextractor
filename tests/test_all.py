@@ -209,7 +209,20 @@ class TestExtract(TestCase):
 
         self.assertFalse(mock_print.called)
 
-        test = "test asd string"
+    def test_extract_single_string(
+        self,
+        mock_check_valid_file,
+        mock_get_media_list,
+        mock_extract_media,
+        mock_zip_file,
+        mock_print,
+    ):
+        src = ["my/folder/Test.docx"]
+        dest = "Output_folder"
+
+        extract(src=src, dest=dest, log=False)
+
+        self.assertFalse(mock_print.called)
 
 
 if __name__ == "__main__":
