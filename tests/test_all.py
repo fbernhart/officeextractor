@@ -190,7 +190,7 @@ class TestExtract(TestCase):
         for expected_calls, actual_calls in zip(expected, mock_print.call_args_list):
             self.assertEqual(expected_calls, actual_calls.args[0])
 
-    def test_extract_log_false(
+    def test_extract_log_false_single_string(
         self,
         mock_check_valid_file,
         mock_get_media_list,
@@ -198,26 +198,7 @@ class TestExtract(TestCase):
         mock_zip_file,
         mock_print,
     ):
-        src = [
-            "my/folder/Test.docx",
-            "my/other/folder/Test.xlsx",
-            "Test.pptx",
-        ]
-        dest = "Output_folder"
-
-        extract(src=src, dest=dest, log=False)
-
-        self.assertFalse(mock_print.called)
-
-    def test_extract_single_string(
-        self,
-        mock_check_valid_file,
-        mock_get_media_list,
-        mock_extract_media,
-        mock_zip_file,
-        mock_print,
-    ):
-        src = ["my/folder/Test.docx"]
+        src = "my/folder/Test.docx"
         dest = "Output_folder"
 
         extract(src=src, dest=dest, log=False)

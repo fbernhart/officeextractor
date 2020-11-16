@@ -41,7 +41,7 @@ def extract(
 
     Parameters
     ----------
-    src : str or List[str] or Tuple[str]
+    src : str or List[str, ...] or Tuple[str, ...]
         Either a single file (string) or a list or tuple of files
         (list/tuple of strings).
     dest : str
@@ -229,8 +229,9 @@ def extract_media(
 
 
 # Todo:
-#  - Test coverage. coverage.py & coveralls.io
 #  - CI (Travis)
-#  - Sphinx & Read the Docs
-#  - Add support for password encryption
+#  - coveralls.io
 #  - Add badges (pre-commit, black etc.)
+#  - Add README.md
+#  - Add support for password encryption
+#  - Sphinx & Read the Docs

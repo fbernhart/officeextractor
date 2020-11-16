@@ -1,0 +1,21 @@
+language: python
+sudo: true
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+
+matrix:
+  fast_finish: true
+
+install:
+  - pip install -r dev-requirements.txt
+  - pip install coveralls
+
+script: python -m unittest discover tests
+
+after_success: coveralls
+
+
+
