@@ -1,5 +1,4 @@
 language: python
-sudo: true
 python:
   - "3.6"
   - "3.7"
@@ -16,6 +15,3 @@ install:
 script: python -m unittest discover tests
 
 after_success: coveralls
-
-
-
