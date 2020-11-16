@@ -113,13 +113,15 @@ class TestExtractMedia(TestCase):
             media_list=media_list, zip_file=mock_zip_file, output_folder=output_folder
         )
 
+        mock_open_filename = mock_open_file.call_args_list[0].args[0].parts
+        mock_open_mode = mock_open_file.call_args_list[0].args[1]
+
         self.assertEqual(1, mock_create_folder.call_count)
         self.assertEqual(7, mock_open_file.call_count)
         self.assertEqual(b"abcdefg", mock_open_file().write.call_args.args[0])
-        self.assertEqual(
-            r"(WindowsPath('AAAA/Test.docx/image1.jpeg'), 'wb')",
-            str(mock_open_file.call_args_list[0].args),
-        )
+
+        self.assertEqual(("AAAA", "Test.docx", "image1.jpeg"), mock_open_filename)
+        self.assertEqual("wb", mock_open_mode)
         self.assertEqual(
             [("jpeg", 3), ("png", 2), ("gif", 1), ("mp4", 1)], file_type_count
         )

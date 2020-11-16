@@ -195,7 +195,7 @@ def extract_media(
     zip_file : ZipFile
         The zip file to extract the media from
     output_folder : Path
-        The folder that needs to be created. (e.g.: "Output\\File1.docx")
+        The folder that needs to be created. (e.g.: "Output/File1.docx")
 
     Returns
     ------
