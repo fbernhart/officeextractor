@@ -209,6 +209,8 @@ class TestExtract(TestCase):
 
         self.assertFalse(mock_print.called)
 
+        test = "test asd string"
+
 
 if __name__ == "__main__":
     unittest.main()

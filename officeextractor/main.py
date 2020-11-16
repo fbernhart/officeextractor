@@ -229,8 +229,8 @@ def extract_media(
 
 
 # Todo:
-#  - Git precommit hooks
 #  - Test coverage. coverage.py & coveralls.io
 #  - CI (Travis)
 #  - Sphinx & Read the Docs
 #  - Add support for password encryption
+#  - Add badges (pre-commit, black etc.)
