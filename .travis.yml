@@ -14,6 +14,8 @@ jobs:
 
 install: pip install coveralls
 
-script: python -m unittest discover tests
+script:
+  - coverage run -m unittest discover tests
+  - coverage report
 
 after_success: coveralls
