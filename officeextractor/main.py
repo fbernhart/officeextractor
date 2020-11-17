@@ -42,8 +42,8 @@ def extract(
     Parameters
     ----------
     src : str or List[str, ...] or Tuple[str, ...]
-        Either a single file (string) or a list or tuple of files
-        (list/tuple of strings).
+        Either a single file (string) or several files (list/tuple of strings) as
+        relative or full path.
     dest : str
         Output directory as relative or full path.
     log : bool

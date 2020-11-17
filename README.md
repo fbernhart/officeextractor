@@ -55,19 +55,19 @@ pip install officeextractor
 ```
 
 #### Parameters
-> officeextractor.extract(src, dest, log=True)
+> **officeextractor.extract(src, dest, log=True)**
 
-> src : str or List[str, ...] or Tuple[str, ...]
+> **src :** ***str, list of str or tuple of str***
 > 
-> Either a single file (string) or a list or tuple of files (list/tuple of strings).
-
-> dest : str
+> Either a single file (string) or several files (list/tuple of strings) as relative or full path.
 > 
->   Output directory as relative or full path.
-
-> log : bool
+> **dest :** ***str***
 > 
-> Optional. Whether logging should be actived or not. If True, print a summary of the extraction. Default is True.
+> Output directory as relative or full path.
+> 
+> **log :** ***bool, optional***
+> 
+> Whether logging should be actived or not. If True, print a summary of the extraction. Default is True.
 
 <br>
 
