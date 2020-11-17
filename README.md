@@ -7,11 +7,11 @@
 </tr>
 <tr>
     <td>Version Info</td>
-    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/v/officeextrator?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue" alt="PyPI Version"></a> <a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/dm/officeextrator.svg?style=flat-square&label=Downloads&logo=PyPI&logoColor=white" alt="PyPI Downloads"></a></td>
+    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/v/officeextractor?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue" alt="PyPI Version"></a> <a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/dm/officeextractor.svg?style=flat-square&label=Downloads&logo=PyPI&logoColor=white" alt="PyPI Downloads"></a></td>
 </tr>
 <tr>
     <td>Compatibility</td>
-    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/pyversions/officeextrator?style=flat-square&label=Python&logo=Python&logoColor=white&color=blue" alt="Python Versions"></a></td>
+    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/pyversions/officeextractor?style=flat-square&label=Python&logo=Python&logoColor=white&color=blue" alt="Python Versions"></a></td>
 </tr>
 <tr>
     <td>Style</td>
