@@ -75,7 +75,7 @@ pip install officeextractor
 > 
 > **dest :** ***str***
 > 
-> Output directory as relative or full path.
+> Output directory as relative or full path. If the directory doesn't exist, it will be created.
 > 
 > **log :** ***bool, optional***
 > 
