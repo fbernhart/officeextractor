@@ -3,11 +3,11 @@
 <table>
 <tr>
     <td>Test Status</td>
-    <td><a href="https://travis-ci.com/fbernhart/officeextractor"><img src="https://img.shields.io/travis/com/fbernhart/officeextractor/main.svg?style=flat-square&label=TravisCI&logo=Travis&logoColor=white" alt="Build Status"></a> <a href="https://coveralls.io/github/fbernhart/officeextractor?branch=main"><img src="https://img.shields.io/coveralls/fbernhart/officeextractor/main.svg?style=flat-square&label=coverage&logo=coveralls&logoColor=white" alt="Coverage Status"></a></td>
+    <td><a href="https://travis-ci.com/fbernhart/officeextractor"><img src="https://img.shields.io/travis/com/fbernhart/officeextractor/main?style=flat-square&label=TravisCI&logo=Travis&logoColor=white" alt="Build Status"></a> <a href="https://coveralls.io/github/fbernhart/officeextractor?branch=main"><img src="https://img.shields.io/coveralls/fbernhart/officeextractor/main?style=flat-square&label=coverage&logo=coveralls&logoColor=white" alt="Coverage Status"></a></td>
 </tr>
 <tr>
     <td>Version Info</td>
-    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/v/officeextractor?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue" alt="PyPI Version"></a> <a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/dm/officeextractor.svg?style=flat-square&label=Downloads&logo=PyPI&logoColor=white" alt="PyPI Downloads"></a></td>
+    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/v/officeextractor?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue" alt="PyPI Version"></a> <a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/dm/officeextractor?style=flat-square&label=Downloads&logo=PyPI&logoColor=white" alt="PyPI Downloads"></a></td>
 </tr>
 <tr>
     <td>Compatibility</td>
@@ -15,7 +15,7 @@
 </tr>
 <tr>
     <td>Style</td>
-    <td><a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000?style=flat-square&.svg" alt="Code Style: Black"></a> <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" alt="pre-commit"></a></td>
+    <td><a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000?style=flat-square" alt="Code Style: Black"></a> <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" alt="pre-commit"></a></td>
 </tr>
 </table>
 
