@@ -58,7 +58,7 @@ def extract(
     --------
     >>> extract(src=("File1.docx", "File2.xlsx"), dest="Output_Folder", log=True)
 
-    4 media files found in File1.docx:
+    4 media files extracted from File1.docx:
     - 2 jpeg
     - 1 gif
     - 1 png
@@ -88,9 +88,9 @@ def extract(
             if amount_files == 0:
                 print(f"\nNo media files found in {file_name}.")
             elif amount_files == 1:
-                print(f"\n1 media file found in {file_name}:")
+                print(f"\n1 media file extracted from {file_name}:")
             else:
-                print(f"\n{amount_files} media files found in {file_name}:")
+                print(f"\n{amount_files} media files extracted from {file_name}:")
 
             # Print amount of file types
             for i in file_type_count:

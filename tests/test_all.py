@@ -181,9 +181,9 @@ class TestExtract(TestCase):
         # Test print() to sys.stdout
         expected = (
             "\nNo media files found in my/folder/Test.docx.",
-            "\n1 media file found in my/other/folder/Test.xlsx:",
+            "\n1 media file extracted from my/other/folder/Test.xlsx:",
             "- 1 jpg",
-            "\n6 media files found in Test.pptx:",
+            "\n6 media files extracted from Test.pptx:",
             "- 3 jpg",
             "- 2 gif",
             "- 1 mp4",
