@@ -7,9 +7,13 @@
 | Compatibility | [![Python Versions](https://img.shields.io/pypi/pyversions/officeextrator?style=flat-square&label=Python&logo=Python&logoColor=white&color=blue)](https://pypi.org/project/officeextractor) |
 | Style | [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000?style=flat-square&.svg)](https://github.com/psf/black) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit) |
 
+<br>
+
 ## About
 
 `officeextractor` is a Python library to extract media files like images, audio and video from office documents (Microsoft Office & LibreOffice).
+
+<br>
 
 ## Supported File Types
 
@@ -24,12 +28,15 @@ LibreOffice Impress | odp, otp, odg | images
 
 > :warning: **NOTE:** There is no support for Microsoft Office 2003 files (doc, xls, ppt etc.)
 
+<br>
 
 ## Installation
 
 ```
 pip install officeextractor
 ```
+
+<br>
 
 ## Usage
 
@@ -61,6 +68,8 @@ pip install officeextractor
 > log : bool
 > 
 > Optional. Whether logging should be actived or not. If True, print a summary of the extraction. Default is True.
+
+<br>
 
 ## Licence
 
