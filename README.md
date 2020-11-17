@@ -11,7 +11,7 @@
 
 ## About
 
-`officeextractor` is a Python library to extract media files like images, audio and video from office documents (Microsoft Office & LibreOffice).
+**officeextractor** is a Python library to extract media files like images, audio and video from office documents (Microsoft Office & LibreOffice).
 
 <br>
 
