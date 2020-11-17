@@ -3,7 +3,7 @@ from zipfile import ZipFile
 from pathlib import Path
 from typing import Union, Optional, List, Tuple
 
-from officeextractor.exceptions import FileTypeError, NotAValidZipFileError
+from officeextractor.exceptions import FileTypeError, NotAValidFileError
 
 SUPPORTED_FILETYPES = [
     "docx",  # Microsoft Word
@@ -45,7 +45,8 @@ def extract(
         Either a single file (string) or several files (list/tuple of strings) as
         relative or full path.
     dest : str
-        Output directory as relative or full path.
+        Output directory as relative or full path. If the directory doesn't exist, it
+        will be created.
     log : bool
         Optional. Whether logging should be actived or not. If True, print a summary of
         the extraction. Default is True.
@@ -116,7 +117,7 @@ def check_valid_file(file_name: str) -> None:
 
     if file_type in OFFICE_2003_FILETYPES:
         raise FileTypeError(
-            f"Invalid file: {file_name}. Office 2003 files are not supported."
+            f"Invalid file: {file_name}. Microsoft Office 2003 files are not supported."
         )
 
     if file_type not in SUPPORTED_FILETYPES:
@@ -125,8 +126,8 @@ def check_valid_file(file_name: str) -> None:
         )
 
     if not zipfile.is_zipfile(file_name):
-        raise NotAValidZipFileError(
-            f"Seems like file {file_name} is not a valid zip file. "
+        raise NotAValidFileError(
+            f"Seems like the file '{file_name}' is not a valid file. "
             f"Maybe the file is corrupted."
         )
 
@@ -226,8 +227,3 @@ def extract_media(
     # Return the file_type_count as list, sorted first by values (frequency) and then by
     # key (file extension)
     return sorted(file_type_count.items(), key=lambda i: (-i[1], i[0]))
-
-
-# Todo:
-#  - Add PyPi
-#  - Add support for password encryption

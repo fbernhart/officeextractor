@@ -6,5 +6,5 @@ class FileTypeError(OfficeExtractorError):
     pass
 
 
-class NotAValidZipFileError(OfficeExtractorError):
+class NotAValidFileError(OfficeExtractorError):
     pass

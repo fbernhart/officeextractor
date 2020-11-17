@@ -38,7 +38,7 @@ LibreOffice Writer | odt, ott | images
 LibreOffice Calc | ods, ots | images 
 LibreOffice Impress | odp, otp, odg | images 
 
-##### &#9888; **NOTE:** There is no support for Microsoft Office 2003 files (doc, xls, ppt etc.)
+##### &#9888; **NOTE:** Microsoft Office 2003 files (doc, dot, xls, xlt, ppt, pot) are not supported.
 
 <br>
 

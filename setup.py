@@ -1,5 +1,5 @@
 import pathlib
-from setuptools import setup
+import setuptools
 
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
@@ -14,7 +14,7 @@ with open("officeextractor/__init__.py") as fh:
             delim = '"' if '"' in line else "'"
             __version__ = line.split(delim)[1]
 
-setup(
+setuptools.setup(
     name="officeextractor",
     version=__version__,
     description="officeextractor extracts media files (images, videos, music) from"
@@ -39,6 +39,6 @@ setup(
         "Topic :: Utilities",
     ],
     packages=["officeextractor"],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
     # install_requires=["some_dependency", "other_dependency"],
 )

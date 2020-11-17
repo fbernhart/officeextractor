@@ -1,3 +1,3 @@
 from officeextractor.main import extract
 
-__version__ = "0.1.5"
+__version__ = "0.1.0"

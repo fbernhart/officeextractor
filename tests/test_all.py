@@ -12,7 +12,7 @@ from officeextractor.main import (
     extract,
 )
 
-from officeextractor.exceptions import FileTypeError, NotAValidZipFileError
+from officeextractor.exceptions import FileTypeError, NotAValidFileError
 
 
 class TestCheckValidFile(TestCase):
@@ -26,7 +26,7 @@ class TestCheckValidFile(TestCase):
 
     @patch("officeextractor.main.zipfile.is_zipfile", return_value=False)
     def test_corrupted_zip_file(self, mock_zip_file):
-        with self.assertRaises(NotAValidZipFileError):
+        with self.assertRaises(NotAValidFileError):
             check_valid_file(file_name="my/folder/Corrupt_File.docx")
 
     @patch("officeextractor.main.zipfile.is_zipfile", return_value=True)
