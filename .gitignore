@@ -3,6 +3,11 @@ __pycache__
 venv
 venv36
 
+# Builds
+build
+dist
+*.egg-info
+
 # IDE
 .idea
 .vscode
@@ -13,4 +18,3 @@ venv36
 # coverage
 .coverage
 htmlcov
-

@@ -1,5 +1,21 @@
 # officeextractor
 
+
+<table>
+<tr>
+    <td>First</td>
+    <td>Second</td>
+    <td>Third</td>
+    <td>One More</td>
+</tr>
+</table>
+
+
+&nbsp; | &nbsp;
+------ | -----
+Stuff  | More things
+
+
 |     |     |
 | --- | --- |
 | Test Status | [![Build Status](https://img.shields.io/travis/com/fbernhart/officeextractor/main.svg?style=flat-square&label=TravisCI&logo=Travis&logoColor=white)](https://travis-ci.com/fbernhart/officeextractor) [![Coverage Status](https://img.shields.io/coveralls/fbernhart/officeextractor/main.svg?style=flat-square&label=coverage&logo=coveralls&logoColor=white)](https://coveralls.io/github/fbernhart/officeextractor?branch=main) |
@@ -26,7 +42,7 @@ LibreOffice Writer | odt, ott | images
 LibreOffice Calc | ods, ots | images 
 LibreOffice Impress | odp, otp, odg | images 
 
-> :warning: **NOTE:** There is no support for Microsoft Office 2003 files (doc, xls, ppt etc.)
+##### &#9888; **NOTE:** There is no support for Microsoft Office 2003 files (doc, xls, ppt etc.)
 
 <br>
 
@@ -54,7 +70,7 @@ pip install officeextractor
 - 1 png
 ```
 
-#### Parameters
+##### Parameters
 > **officeextractor.extract(src, dest, log=True)**
 
 > **src :** ***str, list of str or tuple of str***

@@ -229,9 +229,5 @@ def extract_media(
 
 
 # Todo:
-#  - CI (Travis)
-#  - coveralls.io
-#  - Add badges (pre-commit, black etc.)
-#  - Add README.md
+#  - Add PyPi
 #  - Add support for password encryption
-#  - Sphinx & Read the Docs
