@@ -1,27 +1,23 @@
 # officeextractor
 
-
 <table>
 <tr>
-    <td>First</td>
-    <td>Second</td>
-    <td>Third</td>
-    <td>One More</td>
+    <td>Test Status</td>
+    <td><a href="https://travis-ci.com/fbernhart/officeextractor"><img src="https://img.shields.io/travis/com/fbernhart/officeextractor/main.svg?style=flat-square&label=TravisCI&logo=Travis&logoColor=white" alt="Build Status"></a> <a href="https://coveralls.io/github/fbernhart/officeextractor?branch=main"><img src="https://img.shields.io/coveralls/fbernhart/officeextractor/main.svg?style=flat-square&label=coverage&logo=coveralls&logoColor=white" alt="Coverage Status"></a></td>
+</tr>
+<tr>
+    <td>Version Info</td>
+    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/v/officeextrator?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue" alt="PyPI Version"></a> <a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/dm/officeextrator.svg?style=flat-square&label=Downloads&logo=PyPI&logoColor=white" alt="PyPI Downloads"></a></td>
+</tr>
+<tr>
+    <td>Compatibility</td>
+    <td><a href="https://pypi.org/project/officeextractor"><img src="https://img.shields.io/pypi/pyversions/officeextrator?style=flat-square&label=Python&logo=Python&logoColor=white&color=blue" alt="Python Versions"></a></td>
+</tr>
+<tr>
+    <td>Style</td>
+    <td><a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000?style=flat-square&.svg" alt="Code Style: Black"></a> <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" alt="pre-commit"></a></td>
 </tr>
 </table>
-
-
-&nbsp; | &nbsp;
------- | -----
-Stuff  | More things
-
-
-|     |     |
-| --- | --- |
-| Test Status | [![Build Status](https://img.shields.io/travis/com/fbernhart/officeextractor/main.svg?style=flat-square&label=TravisCI&logo=Travis&logoColor=white)](https://travis-ci.com/fbernhart/officeextractor) [![Coverage Status](https://img.shields.io/coveralls/fbernhart/officeextractor/main.svg?style=flat-square&label=coverage&logo=coveralls&logoColor=white)](https://coveralls.io/github/fbernhart/officeextractor?branch=main) |
-| Version Info | [![PyPI Version](https://img.shields.io/pypi/v/officeextrator?style=flat-square&label=PyPI&logo=PyPI&logoColor=white&color=blue)](https://pypi.org/project/officeextractor) [![PyPI Downloads](https://img.shields.io/pypi/dm/officeextrator.svg?style=flat-square&label=Downloads&logo=PyPI&logoColor=white)](https://pypi.org/project/officeextractor) |
-| Compatibility | [![Python Versions](https://img.shields.io/pypi/pyversions/officeextrator?style=flat-square&label=Python&logo=Python&logoColor=white&color=blue)](https://pypi.org/project/officeextractor) |
-| Style | [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000?style=flat-square&.svg)](https://github.com/psf/black) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit) |
 
 <br>
 
