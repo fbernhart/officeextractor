@@ -17,14 +17,20 @@ with open("officeextractor/__init__.py") as fh:
 setuptools.setup(
     name="officeextractor",
     version=__version__,
-    description="officeextractor extracts media files (images, videos, music) from"
-    " Microsoft Office and LibreOffice files.",
+    description="officeextractor extracts media files (images, videos, music) from "
+    "Microsoft Office and LibreOffice files.",
     long_description=README,
     long_description_content_type="text/markdown",
+    keywords="office extractor media images audio video extract docx pptx xlsx "
+    "libreoffice microsoft",
     url="https://github.com/fbernhart/officeextractor",
     author="Florian Bernhart",
     author_email="florian-bernhart@hotmail.com",
     license="GNU General Public License v3.0",
+    project_urls={
+        "Bug Tracker": "https://github.com/fbernhart/officeextractor/issues",
+        "Source Code": "https://github.com/fbernhart/officeextractor",
+    },
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python :: 3",
