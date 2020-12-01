@@ -180,24 +180,21 @@ class TestExtract(TestCase):
         self.assertEqual(5, mock_get_media_list.call_count)
         self.assertEqual(5, mock_extract_media.call_count)
         self.assertEqual(5, mock_zip_file.call_count)
-        self.assertEqual(
-            ("some", "other", "folder3", "Test3.xlsx"),
-            mock_zip_file.call_args[0][0].parts,
-        )
+        self.assertEqual(Path(src[-1]), mock_zip_file.call_args[0][0])
         self.assertEqual("r", mock_zip_file.call_args[0][1])
 
         # Test print() to sys.stdout
         expected = (
-            f"\nNo media files found in {Path('some/folder/Test.docx')}.",
-            f"\n1 media file extracted from {Path('some/other/folder/Test.xlsx')}:",
+            f"\nNo media files found in {Path(src[0])}.",
+            f"\n1 media file extracted from {Path(src[1])}:",
             "- 1 jpg",
             "\n6 media files extracted from Test.pptx:",
             "- 3 jpg",
             "- 2 gif",
             "- 1 mp4",
-            f"\n1 media file extracted from {Path('some/other/folder2/Test2.xlsx')}:",
+            f"\n1 media file extracted from {Path(src[3])}:",
             "- 1 png",
-            f"\n2 media files extracted from {Path('some/other/folder3/Test3.xlsx')}:",
+            f"\n2 media files extracted from {Path(src[4])}:",
             "- 2 jpg",
         )
 
