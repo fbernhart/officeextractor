@@ -83,6 +83,12 @@ pip install officeextractor
 
 <br>
 
+## Release Notes
+
+[Can be found here on GitHub](https://github.com/fbernhart/officeextractor/blob/main/RELEASE_NOTES.rst)
+
+<br>
+
 ## Licence
 
 [GNU General Public License v3.0](https://github.com/fbernhart/officeextractor/blob/main/LICENSE)

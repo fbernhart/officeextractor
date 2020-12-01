@@ -50,7 +50,7 @@ Release Notes
 ..
     This is for the upcoming release. Please fill in the changes of your Pull Request:
 
-    0.1.1
+    0.1.2
     ====================
 
     Released: YYYY-MM-DD
@@ -67,9 +67,8 @@ Release Notes
 
     **🐛 Bug-Fixes**
 
-    * Fixed a typo in the PyPI badges in README.md
-    * Fixed an issue with paths under Windows. ``r"\"`` and ``"\\"`` are now working as expected.
-    * The output directory can now be the parent directory of the source file. E.g. ``officeextractor.extract(src="some/folder/file.docx", dest="some/folder")``. The output subdirectories are now created with ``Extract_`` as prefix. E.g. ``some/folder/Extracted_file.docx``
+    *
+    *
 
     **⚠️ Deprecation**
 
@@ -90,6 +89,17 @@ Release Notes
     | *GitHub-Name-1*, *GitHub-Name-2* and *GitHub-Name-3*
 
     --------------------------------------------
+
+
+0.1.1
+====================
+
+Released: 2020-12-01
+
+**🐛 Bug-Fixes**
+
+* Fixed an issue with paths under Windows. ``r"\"`` and ``"\\"`` are now working as expected.
+* The output directory can now be the parent directory of the source file. E.g. ``officeextractor.extract(src="some/folder/file.docx", dest="some/folder")``. The output subdirectories are now created with ``Extract_`` as prefix. E.g. ``some/folder/Extracted_file.docx``
 
 
 0.1.0
