@@ -77,7 +77,7 @@ def extract(
         file_name_path = Path(file_name)
         check_valid_file(file_name_path)  # Check if the file is valid
         # Create subfolder Path object
-        output_folder = Path.joinpath(dest_path, file_name_path.name)
+        output_folder = Path.joinpath(dest_path, "Extracted_" + file_name_path.name)
         # Do the actual extraction
         with ZipFile(file_name_path, "r") as zip_file:
             media_list = get_media_list(zip_file=zip_file)

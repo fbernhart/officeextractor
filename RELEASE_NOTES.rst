@@ -69,6 +69,7 @@ Release Notes
 
     * Fixed a typo in the PyPI badges in README.md
     * Fixed an issue with paths under Windows. ``r"\"`` and ``"\\"`` are now working as expected.
+    * The output directory can now be the parent directory of the source file. E.g. ``officeextractor.extract(src="some/folder/file.docx", dest="some/folder")``. The output subdirectories are now created with ``Extract_`` as prefix. E.g. ``Extracted_file.docx``
 
     **⚠️ Deprecation**
 
