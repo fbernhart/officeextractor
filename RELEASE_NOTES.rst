@@ -67,8 +67,8 @@ Release Notes
 
     **🐛 Bug-Fixes**
 
-    *
-    *
+    * Fixed a typo in the PyPI badges in README.md
+    * Fixed an issue with paths under Windows. ``r"\"`` and ``"\\"`` are now working as expected.
 
     **⚠️ Deprecation**
 

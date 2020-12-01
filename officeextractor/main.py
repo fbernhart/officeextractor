@@ -74,11 +74,12 @@ def extract(
         src = [src]
 
     for file_name in src:
-        check_valid_file(file_name)  # Check if the file is valid
+        file_name_path = Path(file_name)
+        check_valid_file(file_name_path)  # Check if the file is valid
         # Create subfolder Path object
-        output_folder = Path.joinpath(dest_path, file_name.split("/")[-1])
+        output_folder = Path.joinpath(dest_path, file_name_path.name)
         # Do the actual extraction
-        with ZipFile(file_name, "r") as zip_file:
+        with ZipFile(file_name_path, "r") as zip_file:
             media_list = get_media_list(zip_file=zip_file)
             file_type_count = extract_media(
                 media_list=media_list, zip_file=zip_file, output_folder=output_folder
@@ -87,18 +88,18 @@ def extract(
         if log:  # Print short summary, if log==True
             amount_files = sum(i[1] for i in file_type_count)
             if amount_files == 0:
-                print(f"\nNo media files found in {file_name}.")
+                print(f"\nNo media files found in {file_name_path}.")
             elif amount_files == 1:
-                print(f"\n1 media file extracted from {file_name}:")
+                print(f"\n1 media file extracted from {file_name_path}:")
             else:
-                print(f"\n{amount_files} media files extracted from {file_name}:")
+                print(f"\n{amount_files} media files extracted from {file_name_path}:")
 
             # Print amount of file types
             for i in file_type_count:
                 print(f"- {i[1]} {i[0]}")
 
 
-def check_valid_file(file_name: str) -> None:
+def check_valid_file(file_name: Path) -> None:
     """Check if file_name is a valid file.
 
     It is valid, if it is not a Office 2003 file, if it is in the list of supported file
@@ -106,14 +107,14 @@ def check_valid_file(file_name: str) -> None:
 
     Parameters
     ----------
-    file_name : str
+    file_name : Path
 
     Returns
     -------
     None
     """
 
-    file_type = file_name.split(".")[-1]
+    file_type = file_name.suffix.split(".")[-1]
 
     if file_type in OFFICE_2003_FILETYPES:
         raise FileTypeError(

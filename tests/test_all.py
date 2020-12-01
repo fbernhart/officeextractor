@@ -18,20 +18,20 @@ from officeextractor.exceptions import FileTypeError, NotAValidFileError
 class TestCheckValidFile(TestCase):
     def test_Office_2003_file_type(self):
         with self.assertRaises(FileTypeError):
-            check_valid_file(file_name="my/folder/Test.doc")
+            check_valid_file(file_name=Path("my/folder/Test.doc"))
 
     def test_unsupported_file_type(self):
         with self.assertRaises(FileTypeError):
-            check_valid_file(file_name="my/folder/Test.abcdefg")
+            check_valid_file(file_name=Path("my/folder/Test.abcdefg"))
 
     @patch("officeextractor.main.zipfile.is_zipfile", return_value=False)
     def test_corrupted_zip_file(self, mock_zip_file):
         with self.assertRaises(NotAValidFileError):
-            check_valid_file(file_name="my/folder/Corrupt_File.docx")
+            check_valid_file(file_name=Path("my/folder/Corrupt_File.docx"))
 
     @patch("officeextractor.main.zipfile.is_zipfile", return_value=True)
     def test_working_file(self, mock_zip_file):
-        self.assertIsNone(check_valid_file(file_name="my/folder/Valid_File.docx"))
+        self.assertIsNone(check_valid_file(file_name=Path("my/folder/Valid_File.docx")))
 
 
 @patch("officeextractor.main.Path.exists")
@@ -157,9 +157,11 @@ class TestExtract(TestCase):
         mock_print,
     ):
         src = [
-            "my/folder/Test.docx",
-            "my/other/folder/Test.xlsx",
-            "Test.pptx",
+            "some/folder/Test.docx",
+            "some/other/folder/Test.xlsx",
+            "Test.pptx",  # without folder
+            r"some\other\folder2\Test2.xlsx",  # backward slash
+            "some\\other\\folder3\\Test3.xlsx",  # double backward slash
         ]
         dest = "Output_folder"
 
@@ -168,25 +170,32 @@ class TestExtract(TestCase):
             [],
             [("jpg", 1)],
             [("jpg", 3), ("gif", 2), ("mp4", 1)],
+            [("png", 1)],
+            [("jpg", 2)],
         ]
 
         extract(src=src, dest=dest, log=True)
 
-        self.assertEqual(3, mock_check_valid_file.call_count)
-        self.assertEqual(3, mock_get_media_list.call_count)
-        self.assertEqual(3, mock_extract_media.call_count)
-        self.assertEqual(3, mock_zip_file.call_count)
-        self.assertEqual(("Test.pptx", "r"), mock_zip_file.call_args[0])
+        self.assertEqual(5, mock_check_valid_file.call_count)
+        self.assertEqual(5, mock_get_media_list.call_count)
+        self.assertEqual(5, mock_extract_media.call_count)
+        self.assertEqual(5, mock_zip_file.call_count)
+        self.assertEqual(Path(src[-1]), mock_zip_file.call_args[0][0])
+        self.assertEqual("r", mock_zip_file.call_args[0][1])
 
         # Test print() to sys.stdout
         expected = (
-            "\nNo media files found in my/folder/Test.docx.",
-            "\n1 media file extracted from my/other/folder/Test.xlsx:",
+            f"\nNo media files found in {Path(src[0])}.",
+            f"\n1 media file extracted from {Path(src[1])}:",
             "- 1 jpg",
             "\n6 media files extracted from Test.pptx:",
             "- 3 jpg",
             "- 2 gif",
             "- 1 mp4",
+            f"\n1 media file extracted from {Path(src[3])}:",
+            "- 1 png",
+            f"\n2 media files extracted from {Path(src[4])}:",
+            "- 2 jpg",
         )
 
         for expected_calls, actual_calls in zip(expected, mock_print.call_args_list):
