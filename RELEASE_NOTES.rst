@@ -46,49 +46,21 @@ Release Notes
     --------------------------------------------
 
 
-
-..
     This is for the upcoming release. Please fill in the changes of your Pull Request:
 
-    0.1.2
-    ====================
+0.1.2
+====================
 
-    Released: YYYY-MM-DD
+Released: 2024-12-03
 
-    **🎉 New**
+**🎉 New**
 
-    *
-    *
+* Added support for Python 3.11, 3.12 and 3.13.
 
-    **💪🏼 Improvements**
 
-    *
-    *
+**⚠️ Deprecation**
 
-    **🐛 Bug-Fixes**
-
-    *
-    *
-
-    **⚠️ Deprecation**
-
-    *
-    *
-
-    **📘 Documentation**
-
-    *
-    *
-
-    **🧹 Cleanup**
-
-    *
-    *
-
-    | Thanks to the following people on GitHub for contributing to this release:
-    | *GitHub-Name-1*, *GitHub-Name-2* and *GitHub-Name-3*
-
-    --------------------------------------------
+* Removed support for Python 3.6, 3.7 and 3.8.
 
 
 0.1.1

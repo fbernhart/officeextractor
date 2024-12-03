@@ -103,7 +103,7 @@ def check_valid_file(file_name: Path) -> None:
     """Check if file_name is a valid file.
 
     It is valid, if it is not a Office 2003 file, if it is in the list of supported file
-    types and if it can be unziped.
+    types and if it can be unzipped.
 
     Parameters
     ----------
@@ -201,7 +201,7 @@ def extract_media(
 
     Returns
     ------
-    file_tjype_count : list[tuple[str, int]]
+    file_type_count : list[tuple[str, int]]
         A summary of how many media files of which type have been extracted. Sorted by
         frequency (e.g.: [png: 4, jpg: 3, gif: 1]). Empty list, if there were no media
         files in `zip_file`.

@@ -3,7 +3,7 @@
 <table>
 <tr>
     <td>Test Status</td>
-    <td><a href="https://travis-ci.com/fbernhart/officeextractor"><img src="https://img.shields.io/travis/com/fbernhart/officeextractor/main?style=flat-square&label=TravisCI&logo=Travis&logoColor=white" alt="Build Status"></a> <a href="https://coveralls.io/github/fbernhart/officeextractor?branch=main"><img src="https://img.shields.io/coveralls/fbernhart/officeextractor/main?style=flat-square&label=coverage&logo=coveralls&logoColor=white" alt="Coverage Status"></a></td>
+    <td><a href="https://github.com/fbernhart/officeextractor/actions/workflows/python-package.yml"><img src="https://img.shields.io/github/actions/workflow/status/fbernhart/officeextractor/python-package.yml?style=flat-square&label=GitHub Actions&logo=github&logoColor=white" alt="Build Status"></a> <a href="https://coveralls.io/github/fbernhart/officeextractor?branch=main"><img src="https://img.shields.io/coveralls/fbernhart/officeextractor/main?style=flat-square&label=coverage&logo=coveralls&logoColor=white" alt="Coverage Status"></a></td>
 </tr>
 <tr>
     <td>Version Info</td>
