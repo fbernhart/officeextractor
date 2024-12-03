@@ -34,3 +34,5 @@ jobs:
         coverage run --source=officeextractor -m unittest discover tests
         coverage report
         coveralls
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
